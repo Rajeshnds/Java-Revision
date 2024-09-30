@@ -20,11 +20,17 @@ class HelloWorld {
 
         // another way to use nextInt is we can use just nextLine for all the input and we will convert it accordingly using parsing method.
 
+        // checking second commit
+
+        System.out.println("Checking second commit");
+
+
         System.out.printf("%d is an excellent age to start programming. What language do you preger? ", age);
 
         String language = scanner.nextLine();
 
         System.out.printf("%s is a very popular programming language.", language);
+
 
         scanner.close();
 
