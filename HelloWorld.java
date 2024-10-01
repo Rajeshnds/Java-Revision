@@ -4,32 +4,68 @@ class HelloWorld {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("What is your name? ");
-        String name = scanner.nextLine();
+        System.out.print("Enter the first number: ");
+        double number1 = scanner.nextDouble();
+        scanner.nextLine();
 
-        System.out.printf("Hello %s. How old are you? ", name);
-        // int age = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        double number2 = scanner.nextDouble();
+        scanner.nextLine();
 
-        int age = Integer.parseInt(scanner.nextLine());
-        // double gpa = Double.parseDouble(scanner.nextLine());
+        System.out.print("What operation do you want to perform? ");
+        String operation = scanner.nextLine();
 
-        // 26 will be taken by age but <enter> key press will be left in input buffer. So, when nextline() method come it will not take new input istead it will take previous <enter> key press input from input buffer.
-        // to avoid this we have to put extra nextline() after nextInt or nextFloat or nextDouble except nextLine();
+        if (operation.equals("sum")){
+            System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
+        }
+        else if (operation.equals("sub")){
+            System.out.printf("%f - %f = %f", number1, number2, number1 - number2);
 
-        // scanner.nextLine();
+        }
+        else if (operation.equals("mul")){
+            System.out.printf("%f * %f = %f", number1, number2, number1 * number2);
 
-        // another way to use nextInt is we can use just nextLine for all the input and we will convert it accordingly using parsing method.
+        }
+        else if (operation.equals("div")){
+            if (number2 == 0){
+                System.out.println("Can not divide by zero");
+            }
+            else {
+                System.out.printf("%f / %f = %f", number1, number2, number1 / number2);
+            }
 
-        // checking second commit
+        }
+        else {
+            System.out.printf("%s is not a supported operation.", operation);
+        }
 
-        System.out.println("Checking second commit");
+
+        // System.out.print("What is your name? ");
+        // String name = scanner.nextLine();
+
+        // System.out.printf("Hello %s. How old are you? ", name);
+        // // int age = scanner.nextInt();
+
+        // int age = Integer.parseInt(scanner.nextLine());
+        // // double gpa = Double.parseDouble(scanner.nextLine());
+
+        // // 26 will be taken by age but <enter> key press will be left in input buffer. So, when nextline() method come it will not take new input istead it will take previous <enter> key press input from input buffer.
+        // // to avoid this we have to put extra nextline() after nextInt or nextFloat or nextDouble except nextLine();
+
+        // // scanner.nextLine();
+
+        // // another way to use nextInt is we can use just nextLine for all the input and we will convert it accordingly using parsing method.
+
+        // // checking second commit
+
+        // System.out.println("Checking second commit");
 
 
-        System.out.printf("%d is an excellent age to start programming. What language do you preger? ", age);
+        // System.out.printf("%d is an excellent age to start programming. What language do you preger? ", age);
 
-        String language = scanner.nextLine();
+        // String language = scanner.nextLine();
 
-        System.out.printf("%s is a very popular programming language.", language);
+        // System.out.printf("%s is a very popular programming language.", language);
 
 
         scanner.close();
