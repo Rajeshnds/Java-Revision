@@ -15,29 +15,51 @@ class HelloWorld {
         System.out.print("What operation do you want to perform? ");
         String operation = scanner.nextLine();
 
-        if (operation.equals("sum")){
-            System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
+        switch (operation) {
+            case "sum":
+                System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
+                break;
+            case "sub":
+                System.out.printf("%f - %f = %f", number1, number2, number1 - number2);
+                break;
+            case "mul":
+                System.out.printf("%f * %f = %f", number1, number2, number1 * number2);
+                break;
+            case "div":
+                if(number2 == 0){
+                    System.out.println("Can not divide by zero");
+                }
+                else {
+                    System.out.printf("%f / %f = %f", number1, number2, number1 / number2);
+                }
+                break;
+            default:
+                System.out.printf("%s is not a supported operation.", operation);
         }
-        else if (operation.equals("sub")){
-            System.out.printf("%f - %f = %f", number1, number2, number1 - number2);
 
-        }
-        else if (operation.equals("mul")){
-            System.out.printf("%f * %f = %f", number1, number2, number1 * number2);
+        // if (operation.equals("sum")){
+        //     System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
+        // }
+        // else if (operation.equals("sub")){
+        //     System.out.printf("%f - %f = %f", number1, number2, number1 - number2);
 
-        }
-        else if (operation.equals("div")){
-            if (number2 == 0){
-                System.out.println("Can not divide by zero");
-            }
-            else {
-                System.out.printf("%f / %f = %f", number1, number2, number1 / number2);
-            }
+        // }
+        // else if (operation.equals("mul")){
+        //     System.out.printf("%f * %f = %f", number1, number2, number1 * number2);
 
-        }
-        else {
-            System.out.printf("%s is not a supported operation.", operation);
-        }
+        // }
+        // else if (operation.equals("div")){
+        //     if (number2 == 0){
+        //         System.out.println("Can not divide by zero");
+        //     }
+        //     else {
+        //         System.out.printf("%f / %f = %f", number1, number2, number1 / number2);
+        //     }
+
+        // }
+        // else {
+        //     System.out.printf("%s is not a supported operation.", operation);
+        // }
 
 
         // System.out.print("What is your name? ");
