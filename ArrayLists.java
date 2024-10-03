@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Comparator;
+// import java.util.Comparator;
 
 class ArrayLists {
     public static void main(String[] args) {
